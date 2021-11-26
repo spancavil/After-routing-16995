@@ -1,0 +1,19 @@
+.itemDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vw;
+    width: 90vw;
+    box-shadow: 10px 10px 25px -5px rgba(0,0,0,0.79);
+    background-color: darkslategray;
+    img {
+        width: 50%;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
