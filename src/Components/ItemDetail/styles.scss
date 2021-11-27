@@ -1,14 +1,16 @@
 .itemDetail {
+    align-self: center;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: 90vw;
+    height: 80vh;
     width: 90vw;
+    font-size: 40px;
     box-shadow: 10px 10px 25px -5px rgba(0,0,0,0.79);
     background-color: darkslategray;
     img {
-        width: 50%;
+        width: 40%;
     }
 }
 

@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './styles.scss';
 
 const ItemDetail = ({character}) => {
     return (
-        <div>
-            <p>{character.name}</p>
+        <div className="itemDetail">
+            <img src ={character.image} alt="chardetail"/>
+            <div className="list">
+                <p>{character.name}</p>
+                <p>{character.species}</p>
+                <p>{character.world}</p>
+            </div>
         </div>
     )
 }

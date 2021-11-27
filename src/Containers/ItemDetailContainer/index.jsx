@@ -14,10 +14,8 @@ const ItemDetailContainer = () => {
         
         ( async () => {
             const character = await getCharacter (id);
-            console.log(character);
             setCharacter(character);
         })()
-
 
     }, [id])
     
@@ -27,7 +25,14 @@ const ItemDetailContainer = () => {
         <>
         {
             character !== undefined ?
-            <ItemDetail character={character}/>
+            <div style={{
+                display: 'flex',
+                justifyContent: "center",
+                alignItems: "center",
+                paddingTop: 30,
+            }}>
+                <ItemDetail character={character}/>
+            </div>
             :
             null
         }

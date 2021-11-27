@@ -9,7 +9,7 @@ const ItemList = ({characters}) => {
     return (
         <div className= "itemList">
             {characters.map(character => {
-                return <Item character = {character}/>
+                return <Item character = {character} key={character.id}/>
             })}
         </div>
     )
