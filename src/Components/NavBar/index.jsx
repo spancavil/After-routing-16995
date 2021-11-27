@@ -1,17 +1,28 @@
-import { NavLink, BrowserRouter as Router} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 const NavBar = () => {
 
   return (
-    <Router>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid justify-content-space-between">
-        <NavLink to="/" className="navbar-brand">Rick and Morty</NavLink>
-        <NavLink to={`/category/Human`} className="navbar-brand">Humanos</NavLink>
-        <NavLink to="/category/Alien" className="navbar-brand" >Aliens</NavLink>
-      </div>
-    </nav>
-    </Router>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <NavLink to="/" className="nav-link">Rick and Morty</NavLink>
+            </li>
+            <li class="nav-item active">
+                <NavLink to={`/category/Human`} className="nav-link">Humanos</NavLink>
+            </li>
+            <li class="nav-item active">
+                <NavLink to="/category/Alien" className="nav-link" >Aliens</NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
   )
 }
 

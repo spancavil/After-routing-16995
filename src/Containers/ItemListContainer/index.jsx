@@ -5,7 +5,7 @@ import ItemList from '../../Components/ItemList';
 import './styles.scss'
 
 const ItemListContainer = () => {
-
+    
     const {categoryId} = useParams();
     const [characters, setCharacters] = useState([]);
 
@@ -18,13 +18,13 @@ const ItemListContainer = () => {
             if (categoryId !== undefined){
                 
                 const personajes = await getCharactersByCategory(categoryId);
-                console.log(personajes);
+                // console.log(personajes);
                 setCharacters(personajes)
 
             } else {
                 
                 const personajes = await getCharacters()
-                console.log(personajes)
+                // console.log(personajes)
                 setCharacters(personajes)
 
             }
