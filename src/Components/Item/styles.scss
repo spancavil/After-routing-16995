@@ -7,7 +7,10 @@
     width: 200px;
     box-shadow: 10px 10px 25px -5px rgba(0,0,0,0.79);
     background-color: darkslategray;
-    img {
+    a {
         width: 90%;
+        img{
+            width: 100%;
+        }
     }
 }
