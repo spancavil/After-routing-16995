@@ -1,11 +1,11 @@
-export const getCharacters = () => {
+export const getProducts = () => {
 
     return new Promise ((acc, rej) => {
-        fetch('https://rickandmortyapi.com/api/character')
+        fetch('https://fakestoreapi.com/products')
         .then( res => res.json())
         .then( data => {
-            console.log(data.results);
-            acc(data.results);
+            console.log(data);
+            acc(data);
         })
         .catch( err => {
             alert("Hubo un error: ", err.message)
@@ -14,15 +14,15 @@ export const getCharacters = () => {
     })
 }
 
-export const getCharacter = (id) => {
+export const getProduct = (id) => {
 
     console.log(id);
 
     return new Promise ((acc, rej) => {
-        fetch(`https://rickandmortyapi.com/api/character/${id}`)
+        fetch(`https://fakestoreapi.com/products/${id}`)
         .then( res => res.json())
         .then( data => {
-            console.log(data.results);
+            console.log(data);
             acc(data);
         })
         .catch( err => {
@@ -32,14 +32,14 @@ export const getCharacter = (id) => {
     })
 }
 
-export const getCharactersByCategory = (category) => {
+export const getProductsByCategory = (category) => {
 
     return new Promise ((acc, rej) => {
-        fetch(`https://rickandmortyapi.com/api/character?species=${category}`)
+        fetch(`https://fakestoreapi.com/products/category/${category}`)
         .then( res => res.json())
         .then( data => {
-            console.log(data.results);
-            acc(data.results)
+            console.log(data);
+            acc(data)
         })
         .catch( err => {
             alert("Hubo un error: ", err.message)

@@ -2,14 +2,14 @@ import React from 'react';
 import Item from '../Item';
 import './styles.scss'
 
-const ItemList = ({characters}) => {
+const ItemList = ({products}) => {
 
-    //console.log(characters);
+    //console.log(products);
 
     return (
         <div className= "itemList">
-            {characters.map(character => {
-                return <Item character = {character} key={character.id}/>
+            {products.map(product => {
+                return <Item product = {product} key={product.id}/>
             })}
         </div>
     )

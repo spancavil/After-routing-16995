@@ -10,12 +10,18 @@
     box-shadow: 10px 10px 25px -5px rgba(0,0,0,0.79);
     background-color: darkslategray;
     img {
-        width: 40%;
+        padding: 10px;
+        height: 100%;
+    }
+    p {
+        font-size: 25px;
+        font-style: italic;
     }
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }

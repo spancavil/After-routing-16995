@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getCharacters, getCharactersByCategory } from '../../Services/getItems';
+import { getProducts, getProductsByCategory } from '../../Services/getItems';
 import ItemList from '../../Components/ItemList';
 import './styles.scss'
 
 const ItemListContainer = () => {
     
     const {categoryId} = useParams();
-    const [characters, setCharacters] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect( ()=> {
         
@@ -17,15 +17,15 @@ const ItemListContainer = () => {
             
             if (categoryId !== undefined){
                 
-                const personajes = await getCharactersByCategory(categoryId);
+                const productos = await getProductsByCategory(categoryId);
                 // console.log(personajes);
-                setCharacters(personajes)
+                setProducts(productos)
 
             } else {
                 
-                const personajes = await getCharacters()
+                const productos = await getProducts()
                 // console.log(personajes)
-                setCharacters(personajes)
+                setProducts(productos)
 
             }
         })()
@@ -36,8 +36,8 @@ const ItemListContainer = () => {
 
     return (
         <>
-        {characters.length !== 0 ?
-        <ItemList characters={characters}/>
+        {products.length !== 0 ?
+        <ItemList products={products}/>
         :
         null
         }

@@ -12,13 +12,13 @@ const NavBar = () => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <NavLink to="/" className="nav-link">Rick and Morty</NavLink>
+              <NavLink to="/" className="nav-link">Coder store</NavLink>
             </li>
             <li class="nav-item active">
-                <NavLink to={`/category/Human`} className="nav-link">Humanos</NavLink>
+                <NavLink to={`/category/men's clothing`} className="nav-link">Men</NavLink>
             </li>
             <li class="nav-item active">
-                <NavLink to="/category/Alien" className="nav-link" >Aliens</NavLink>
+                <NavLink to="/category/women's clothing" className="nav-link" >Women</NavLink>
             </li>
           </ul>
         </div>

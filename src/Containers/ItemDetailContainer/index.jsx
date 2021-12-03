@@ -2,36 +2,36 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
-import { getCharacter} from '../../Services/getItems';
+import { getProduct } from '../../Services/getItems';
 import ItemDetail from '../../Components/ItemDetail';
 
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
-    const [character, setCharacter] = useState({})
+    const [product, setProduct] = useState({})
 
     useEffect( ()=> {
         
         ( async () => {
-            const character = await getCharacter (id);
-            setCharacter(character);
+            const product = await getProduct (id);
+            setProduct(product);
         })()
 
     }, [id])
     
-    console.log(character);
+    console.log(product);
 
     return (
         <>
         {
-            character !== undefined ?
+            product !== undefined ?
             <div style={{
                 display: 'flex',
                 justifyContent: "center",
                 alignItems: "center",
                 paddingTop: 30,
             }}>
-                <ItemDetail character={character}/>
+                <ItemDetail product={product}/>
             </div>
             :
             null

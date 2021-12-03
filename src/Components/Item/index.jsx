@@ -2,14 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
 
-const Item = ({character}) => {
-    //console.log(character);
+const Item = ({product}) => {
+
+    //console.log(product);
     return (
         <div className = "item">
-            <NavLink to = {`/item/${character.id}`}> 
-            <img src = {character.image} alt="character"/>
+            <NavLink to = {`/item/${product.id}`}> 
+            <img src = {product.image} alt="product"/>
             </NavLink>
-            <p> Nombre: {character.name}</p>
+            <p>{product.title}</p>
         </div>
     )
 }
