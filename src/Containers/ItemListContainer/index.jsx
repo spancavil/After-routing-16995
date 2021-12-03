@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getProducts, getProductsByCategory } from '../../Services/getItems';
 import ItemList from '../../Components/ItemList';
 import './styles.scss'
+import Loader from '../../Components/Loader';
 
 const ItemListContainer = () => {
     
@@ -39,7 +40,7 @@ const ItemListContainer = () => {
         {products.length !== 0 ?
         <ItemList products={products}/>
         :
-        null
+        <Loader/>
         }
         </>
     )

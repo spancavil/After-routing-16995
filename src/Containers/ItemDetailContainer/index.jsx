@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import { getProduct } from '../../Services/getItems';
 import ItemDetail from '../../Components/ItemDetail';
+import Loader from '../../Components/Loader';
 
 const ItemDetailContainer = () => {
 
@@ -24,7 +25,7 @@ const ItemDetailContainer = () => {
     return (
         <>
         {
-            product !== undefined ?
+            product.title !== undefined ?
             <div style={{
                 display: 'flex',
                 justifyContent: "center",
@@ -34,7 +35,7 @@ const ItemDetailContainer = () => {
                 <ItemDetail product={product}/>
             </div>
             :
-            null
+            <Loader/>
         }
         </>
     )

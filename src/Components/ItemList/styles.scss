@@ -5,4 +5,16 @@
     justify-content: space-around;
     row-gap: 20px;
     padding: 10px;
+    -webkit-animation: appear 2.5s linear infinite;
+    animation: appear 2.5s ease;
+}
+
+@-webkit-keyframes appear {
+    from { opacity:0 } 
+    to { opacity: 1 }
+}
+  
+@keyframes appear { 
+    from{ opacity:0 } 
+    to{ opacity: 1}
 }
