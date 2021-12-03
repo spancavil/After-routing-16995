@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
 
     }, [id])
     
-    console.log(product);
+    //console.log(product);
 
     return (
         <>

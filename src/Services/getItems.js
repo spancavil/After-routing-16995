@@ -4,7 +4,7 @@ export const getProducts = () => {
         fetch('https://fakestoreapi.com/products')
         .then( res => res.json())
         .then( data => {
-            console.log(data);
+            //console.log(data);
             acc(data);
         })
         .catch( err => {
@@ -16,13 +16,13 @@ export const getProducts = () => {
 
 export const getProduct = (id) => {
 
-    console.log(id);
+    //console.log(id);
 
     return new Promise ((acc, rej) => {
         fetch(`https://fakestoreapi.com/products/${id}`)
         .then( res => res.json())
         .then( data => {
-            console.log(data);
+            //console.log(data);
             acc(data);
         })
         .catch( err => {
