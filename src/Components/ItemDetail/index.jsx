@@ -8,11 +8,11 @@ const ItemDetail = ({product}) => {
     const {addItem} = useContext(CartContext)
 
     const [buy, setBuy] = useState(false);
-    const [cantidad, setCantidad] = useState(0);
+    //const [cantidad, setCantidad] = useState(0);
 
     const handleBuy = (qty) => {
         setBuy(true);
-        setCantidad(qty);
+        //setCantidad(qty);
     }
 
     const handlePurchase = () => {
