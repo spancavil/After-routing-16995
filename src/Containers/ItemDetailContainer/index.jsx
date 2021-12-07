@@ -4,17 +4,19 @@ import { useEffect } from 'react';
 import { getCharacter} from '../../Services/getItems';
 import ItemDetail from '../../Components/ItemDetail';
 import Loader from '../../Components/Loader';
+import { useParams } from 'react-router';
 
 const ItemDetailContainer = () => {
 
-    const [character, setCharacter] = useState({})
+    const {id} = useParams()
+    const [character, setCharacter] = useState({});
 
     useEffect( ()=> {
         
-        getCharacter ("1")
+        getCharacter (id)
         .then( char => setCharacter(char));
 
-    }, [])
+    }, [id])
     
     console.log(character);
 

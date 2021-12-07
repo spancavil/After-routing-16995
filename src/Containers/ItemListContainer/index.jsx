@@ -35,7 +35,7 @@ const ItemListContainer = () => {
 
     }, [categoryId])
 
-    console.log(characters);
+    //console.log(characters);
 
     return (
         <>

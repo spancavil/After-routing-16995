@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './styles.scss'
 
 const ItemDetail = ({character}) => {
     return (
-        <div>
+        <div className = "itemDetail">
             <p>{character.name}</p>
         </div>
     )
