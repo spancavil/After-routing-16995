@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { getCharacters, getCharactersByCategory } from '../../Services/getItems';
 import ItemList from '../../Components/ItemList';
 import './styles.scss'
+import Loader from '../../Components/Loader';
 
 const ItemListContainer = () => {
 
@@ -11,7 +12,10 @@ const ItemListContainer = () => {
 
     useEffect( ()=> {
         
+        //Vemos que se obtiene el categoryId desde los params
         console.log(categoryId);
+
+        //Funcion IIFE (autoejecutada) de manera asincrónica utilizando async await.
         ( async () => {
 
             if (categoryId !== undefined){
@@ -38,7 +42,7 @@ const ItemListContainer = () => {
         {characters.length !== 0 ?
         <ItemList characters={characters}/>
         :
-        null
+        <Loader/>
         }
         </>
     )

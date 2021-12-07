@@ -22,7 +22,7 @@ export const getCharacter = (id) => {
         fetch(`https://rickandmortyapi.com/api/character/${id}`)
         .then( res => res.json())
         .then( data => {
-            console.log(data.results);
+            console.log(data);
             acc(data);
         })
         .catch( err => {

@@ -1,9 +1,8 @@
-import { NavLink, BrowserRouter as Router} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 const NavBar = () => {
 
   return (
-    <Router>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <NavLink to="/" className="navbar-brand">Rick and Morty</NavLink>
@@ -25,7 +24,6 @@ const NavBar = () => {
         </div>
       </div>
     </nav>
-    </Router>
   )
 }
 
